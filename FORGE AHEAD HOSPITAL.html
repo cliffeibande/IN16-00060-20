@@ -1,0 +1,126 @@
+<iDOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="hospital.css">
+</head>
+<title>Forge ahead hospital</title>
+<body style="background-image:url('stephanie-liverani-DiA1DpZyOmM-unsplash.jpg');">
+<div class="cliffe">
+<div class="navbar" align="right">
+<ul>
+<li><a href="mail to:owinocliffe10@gmail.com" target="_blank">CONTACT</a></li>
+ <li><a href="file:///F:/HTML%20studio%202/ABOUT.html" target="_blank">ABOUT</a></li>
+ <li><a href="file:///F:/HTML%20studio%202/Services.html" target="_blank">SERVICES</a></li>
+ <li><a href="file:///F:/HTML%20studio%202/Find%20A%20Doctor.html" target="_blank">FIND A DOCTOR</a></li>
+<li><a href="file:///F:/HTML%20studio%202/Patient%20Form.html" target="_blank">APPOINTMENT</a> </li>   
+<li><a href="robina-weermeijer-NIuGLCC7q54-unsplash.jpg" target="_blank">MyFORGE AheadHEALTH</a></li>
+</ul>
+</div>
+<div id="content">
+<h1>FORGE AHEAD HOSPITAL</h1>
+<br>
+<p> Top hospital in the region,at your service.</p>
+<p> You know where to go whenever you need help.</p>
+<p> We value your health.</p>
+<br>
+<div>
+<button type="button"><span></span> SIGN UP</button>
+</div>
+<h2>Mission</h2>
+<p>Inspiring hope and promoting health through integrated clinical practice, education and research. </p>
+<br>
+<h3>Vision</h3>
+<br>
+<p> Transforming medicine to connect and cure as the global authority in the care of serious or complex disease.</p>
+<br>
+<h4> BACKGROUNG INFORMATION</h4>
+<br>
+<p> Established in 2000, the Forge Ahead clinics in Kenya, Tanzania and Uganda consists of acute care facilities offering quality health care. The clinics provides normal medical services, specialist clinics and high-tech diagnostic services, and has a well-equipped 24-hour Emergency Department.
+In 2008, the Forge Ahead clinic located in Nairobi, Kenya was awarded the ISO 9001:2000 certificate. A top priority certificate awarded only when a hospital's clinical, diagnostic, administrative and support services conform to the ISO standards.<article> Presently, the clinics offers services in the areas of Medicine, Surgery, Pediatrics, Obstetrics & Gynecology and Acute Care. They also provide 24-hour emergency / ambulatory services. This is further supported by basic to intermediate specialized investigations both in laboratory and radiology and a well-stocked pharmacy, all on a 24-hour basis. The Clinics has further introduced hemodialysis, dental, ophthalmology, endoscopy, histopathology and imaging services, including image-guided non-vascular intervention, CT scans and Doppler ultrasounds. The significant strengthening of the diagnostic departments has been through the recruitment of expatriate consultants from India – a radiologist and a pathologist.</article>
+</p>
+</div>
+<div class="container">
+  <form action="/action_page.php">
+    <label for="usrname">Username</label>
+    <input type="text" id="usrname" name="usrname" required>
+
+    <label for="psw">Password</label>
+  <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+</div>
+<main>
+<img src="national-cancer-institute-701-FJcjLAQ-unsplash.jpg" width="200" height="200" align="right">
+<a href="file:///F:/HTML%20studio%202/FOUNDATION.html" target="_blank"><img src="naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg" width="250" height="350"></a>
+</main>
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+</body>
+</html>
